@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторная работа №3</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Лабораторная работа №3</h1>
+            <p>МГТУ "СТАНКИН"</p>
+        </header>
+
+        <section class="task-section">
+            <h2>1. Переменные и функции</h2>
+            <div class="task">
+                <h3>Функции min/max/equal</h3>
+                <div class="input-group">
+                    <input type="number" id="num1" placeholder="Число 1">
+                    <input type="number" id="num2" placeholder="Число 2">
+                </div>
+                <button onclick="runTask1()">Проверить функции</button>
+                <div id="task1-result" class="result"></div>
+            </div>
+        </section>
+
+        <section class="task-section">
+            <h2>2. Взаимодействие с пользователем</h2>
+            
+            <div class="task">
+                <h3>Задание 2: Переменные admin и name</h3>
+                <button onclick="runTask2()">Выполнить</button>
+                <div id="task2-result" class="result"></div>
+            </div>
+            
+            <div class="task">
+                <h3>Задание 3: Проверка возраста</h3>
+                <button onclick="runTask3()">Проверить возраст</button>
+                <div id="task3-result" class="result"></div>
+            </div>
+        </section>
+
+        <section class="task-section">
+            <h2>3. Стилизация страницы</h2>
+            <div class="task" id="resume-task">
+                <h3>Моё резюме</h3>
+                <div class="resume-container">
+                    <div class="photo-container">
+                        <img src="https://png.pngtree.com/png-clipart/20241229/original/pngtree-serious-cat-with-a-shirt-and-tie-png-image_18248077.png" class="cat-with-tie">
+                    </div>                    
+                    <div class="resume-info">
+                        <p>Имя: <span id="resume-first-name">Александр</span></p>
+                        <p>Фамилия: <span id="resume-last-name">Якуньков</span></p>
+                        <p>Возраст: <span id="resume-age">21</span></p>
+                        <div class="about-me">
+                            <h4>О себе:</h4>
+                            <p>Студент третьего курса МГТУ "СТАНКИН" группы АДБ-22-07 направления «Автоматизация технологических процессов и производств»</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="resume-controls">
+                    <div class="input-group">
+                        <input type="text" id="new-last-name" placeholder="Новая фамилия">
+                        <button onclick="changeLastName()">Изменить фамилию</button>
+                    </div>
+                    <button onclick="changeBackgroundColor()">Сменить цвет фона</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Раздел 4: Взаимодействие со страницей -->
+        <section class="task-section">
+            <h2>4. Взаимодействие со страницей</h2>
+            <div class="task">
+                <h3>Анкета</h3>
+                <form id="questionnaire">
+                    <div class="form-group">
+                        <label for="user-name">Имя:</label>
+                        <input type="text" id="user-name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="user-age">Возраст:</label>
+                        <input type="number" id="user-age" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Пол:</label>
+                        <div>
+                            <input type="radio" id="male" name="gender" value="М" label for="male">М</label>
+                            <input type="radio" id="female" name="gender" value="Ж" label for="female">Ж</label>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Навыки:</label>
+                        <div>
+                            <input type="checkbox" id="math" name="skills" label for="math">Знание математики</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="programming" name="skills" label for="programming">Знание программирования</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="design" name="skills" label for="design">Дизайн</label>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="education">Образование:</label>
+                        <select id="education">
+                            <option value="school">Среднее</option>
+                            <option value="college">Среднее специальное</option>
+                            <option value="university">Высшее</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="comments">Комментарии:</label>
+                        <textarea id="comments"></textarea>
+                    </div>
+                    
+                    <button type="button" onclick="validateForm()">Отправить</button>
+                </form>
+                
+                <div id="form-result" class="result" style="display: none;">
+                    <h3>Результат проверки анкеты</h3>
+                    <p id="result-text"></p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,219 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f5f7fa;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: #2c3e50;
+    color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.task-section {
+    background: white;
+    margin-bottom: 30px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.task {
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #e1e1e1;
+    border-radius: 5px;
+}
+
+h2 {
+    color: #2c3e50;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+h3 {
+    color: #3498db;
+    margin-bottom: 15px;
+}
+
+.input-group {
+    margin: 15px 0;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+input[type="text"],
+input[type="number"],
+textarea,
+select {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: 100%;
+    font-size: 16px;
+}
+
+button {
+    padding: 10px 15px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+.result {
+    margin-top: 15px;
+    padding: 15px;
+    background-color: #f8f9fa;
+    border-radius: 4px;
+    border-left: 4px solid #3498db;
+}
+
+/* Стили для резюме с котиком */
+.resume-container {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 20px;
+    align-items: center;
+}
+
+.photo-container {
+    position: relative;
+    width: 200px;
+    height: 200px;
+}
+
+.cat-with-tie {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #3498db;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.tie {
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 40px;
+    background-color: #e74c3c;
+    clip-path: polygon(0 0, 100% 0, 80% 100%, 20% 100%);
+    z-index: 2;
+}
+
+.tie::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 20px;
+    height: 30px;
+    background-color: #e74c3c;
+}
+
+.resume-info {
+    flex: 1;
+}
+
+.resume-info p {
+    margin-bottom: 10px;
+    font-size: 18px;
+    padding: 5px 0;
+    border-bottom: 1px dashed #eee;
+}
+
+.resume-controls {
+    margin-top: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group div {
+    margin: 5px 0;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+/* Стили для выбора пола */
+.gender-label {
+    display: inline-block;
+    margin-right: 15px;
+    font-weight: bold;
+    vertical-align: middle;
+}
+
+.gender-options {
+    display: inline-block;
+}
+
+.radio-option {
+    display: inline-block;
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+/* Анимации */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.result {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Анимация для котика */
+.cat-with-tie {
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.cat-with-tie:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
