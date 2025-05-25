@@ -89,7 +89,7 @@ function changeLastName() {
 }
 
 function changeBackgroundColor() {
-    const colors = ['#f8d5d5', '#d5f8e5', '#d5e5f8', '#f8f4d5', '#e9d5f8'];
+    const colors = ['#f8d5d5', '#d5f8e5', '#d5e5f8', '#f8f4d5', '#e9d5f8', '#ffffff'];
     const randomColor = colors[Math.floor(Math.random() * colors.length)];
     document.getElementById('resume-task').style.backgroundColor = randomColor;
 }
