@@ -15,7 +15,7 @@ function runTask1() {
     const num1 = parseFloat(document.getElementById('num1').value);
     const num2 = parseFloat(document.getElementById('num2').value);
     
-    if (isNaN(num1) {
+    if (isNaN(num1)) {
         document.getElementById('task1-result').textContent = 'Введите первое число';
         return;
     }
